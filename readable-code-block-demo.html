@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Readable Code Block Demo</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        padding: 40px;
+      }
+
+      .stack {
+        margin: 20px 0;
+      }
+
+      code.code-block {
+        display: block;
+        background: #f6f8fa;
+        border: 1px solid #ddd;
+        padding: 12px 14px;
+        border-radius: 6px;
+        font-family: Consolas, Monaco, monospace;
+      }
+
+      code.code-block span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Readable HTML Source + Clean Render</h2>
+
+    <p>
+      This keeps the HTML nicely indented without rendering the indentation as
+      part of the code.
+    </p>
+
+    <div class="stack">
+      <code class="code-block">
+        <span>msg.includes('Python')</span>
+        <span>!msg.includes('Python')</span>
+      </code>
+    </div>
+  </body>
+</html>

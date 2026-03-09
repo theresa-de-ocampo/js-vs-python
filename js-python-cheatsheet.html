@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript vs Python Cheat Sheet</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        line-height: 1.4;
+        padding: 24px;
+      }
+
+      h1 {
+        margin-bottom: 8px;
+      }
+      h2 {
+        margin-top: 32px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        vertical-align: top;
+      }
+
+      th {
+        background: #f5f5f5;
+        text-align: left;
+      }
+
+      .stack {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      code.code-block {
+        display: block;
+        background: #f6f8fa;
+        border: 1px solid #ddd;
+        padding: 10px 12px;
+        border-radius: 6px;
+        font-family: Consolas, Monaco, monospace;
+      }
+
+      code.code-block span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript vs Python Cheat Sheet</h1>
+
+    <h2>Input & Output</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Logging</td>
+          <td>
+            <div class="stack">
+              <code class="code-block"><span>console.log()</span></code>
+            </div>
+          </td>
+          <td>
+            <div class="stack">
+              <code class="code-block"><span>print()</span></code>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>User Input</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>// Method 1</span>
+                <span>process.argv.slice(2)</span>
+              </code>
+
+              <code class="code-block">
+                <span>// Method 2</span>
+                <span>// Built-in readline module</span>
+              </code>
+
+              <code class="code-block">
+                <span>// Method 3</span>
+                <span>// readline-sync package</span>
+              </code>
+
+              <code class="code-block">
+                <span>// Method 4 (browser)</span>
+                <span>prompt()</span>
+              </code>
+            </div>
+          </td>
+
+          <td>
+            <div class="stack">
+              <code class="code-block"><span>input()</span></code>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>String Interpolation</td>
+          <td>
+            <div class="stack">
+              <code class="code-block"><span>`Hi ${name}`</span></code>
+            </div>
+          </td>
+          <td>
+            <div class="stack">
+              <code class="code-block"><span>f"Hi {name}"</span></code>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>String Manipulation</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Capitalize first letter</td>
+          <td>
+            <code class="code-block">
+              <span>str.charAt(0).toUpperCase() + str.slice(1)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>capitalize()</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Title Case</td>
+          <td>
+            <code class="code-block">
+              <span>// no direct equivalent</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>title()</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Uppercase</td>
+          <td>
+            <code class="code-block"><span>toUpperCase()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>upper()</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Lowercase</td>
+          <td>
+            <code class="code-block"><span>toLowerCase()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>lower()</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Length of string</td>
+          <td>
+            <code class="code-block"><span>msg.length</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>len(msg)</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Check substring</td>
+          <td>
+            <code class="code-block">
+              <span>msg.includes('Python')</span>
+              <span>!msg.includes('Python')</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>'Python' in msg</span>
+              <span>'Python' not in msg</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Slice string</td>
+          <td>
+            <code class="code-block"><span>msg.slice(2)</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>msg[2:]</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Find substring index</td>
+          <td>
+            <code class="code-block"><span>msg.find('H')</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>msg.find('H')</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Replace substring</td>
+          <td>
+            <code class="code-block"><span>replace()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>replace()</span></code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Arrays</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Collection type</td>
+          <td>
+            <code class="code-block"
+              ><span>// Arrays can contain mixed types</span></code
+            >
+          </td>
+          <td>
+            <code class="code-block"
+              ><span># Lists can contain mixed types</span></code
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>Length</td>
+          <td>
+            <code class="code-block"><span>fruits.length</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>len(fruits)</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Last element</td>
+          <td>
+            <code class="code-block"><span>fruits.at(-1)</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>fruits[-1]</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Slice</td>
+          <td>
+            <code class="code-block"><span>fruits.slice(2,4)</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>fruits[2:4]</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Find index</td>
+          <td>
+            <code class="code-block">
+              <span>fruits.findIndex(f => f === 'Orange')</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits.index('Orange')</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Sort</td>
+          <td>
+            <code class="code-block"><span>fruits.sort()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>fruits.sort()</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Reverse sort</td>
+          <td>
+            <code class="code-block"><span>fruits.sort().reverse()</span></code>
+          </td>
+          <td>
+            <code class="code-block"
+              ><span>fruits.sort(reverse=True)</span></code
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>Reverse order</td>
+          <td>
+            <code class="code-block"><span>fruits.reverse()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>fruits.reverse()</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Sorting numbers</td>
+          <td>
+            <code class="code-block">
+              <span>// JS sorts numbers as strings by default</span>
+              <span>tally.sort((a, b) => b - a)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span># Works normally for numbers</span>
+              <span>tally.sort()</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minimum value</td>
+          <td>
+            <code class="code-block">
+              <span>tally.reduce((a, b) => Math.min(a, b))</span>
+              <span>// Alternative but slower for large arrays</span>
+              <span>Math.min(...tally)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>min(tally)</span>
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Arithmetic</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Floor division</td>
+          <td>
+            <code class="code-block"><span>Math.floor()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>//</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Round</td>
+          <td>
+            <code class="code-block"><span>Math.round()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>round()</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Power</td>
+          <td>
+            <code class="code-block"><span>Math.pow()</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>**</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Number formatting</td>
+          <td>
+            <code class="code-block"><span>// no direct equivalent</span></code>
+          </td>
+          <td>
+            <code class="code-block"><span>f"{variable:.2f}"</span></code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

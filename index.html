@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript vs Python Cheat Sheet</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        line-height: 1.4;
+        padding: 24px;
+      }
+      h1 {
+        margin-bottom: 8px;
+      }
+      h2 {
+        margin-top: 32px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        vertical-align: top;
+      }
+      th {
+        background: #f5f5f5;
+        text-align: left;
+      }
+      code {
+        white-space: pre;
+        display: block;
+        font-family: Consolas, Monaco, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript vs Python Cheat Sheet</h1>
+
+    <h2>Input & Output</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Logging</td>
+          <td><code>console.log()</code></td>
+          <td><code>print()</code></td>
+        </tr>
+
+        <tr>
+          <td>User Input</td>
+          <td>
+            <p><b>Method 1</b></p>
+            <code>process.argv.slice(2)</code>
+            <br />
+            <p><b>Method 2</b></p>
+            <p>Built-in readline module</p>
+            <br />
+            <p><b>Method 3</b></p>
+            <p>readline-sync package</p>
+            <br />
+            <p><b>Method 4 (browser)</b></p>
+            <code>prompt()</code>
+          </td>
+          <td><code>input()</code></td>
+        </tr>
+
+        <tr>
+          <td>String Interpolation</td>
+          <td><code>`Hi ${name}`</code></td>
+          <td><code>f"Hi {name}"</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>String Manipulation</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Capitalize first letter</td>
+          <td><code>str.charAt(0).toUpperCase() + str.slice(1)</code></td>
+          <td><code>capitalize()</code></td>
+        </tr>
+
+        <tr>
+          <td>Title Case</td>
+          <td><code>// no direct equivalent</code></td>
+          <td><code>title()</code></td>
+        </tr>
+
+        <tr>
+          <td>Uppercase</td>
+          <td><code>toUpperCase()</code></td>
+          <td><code>upper()</code></td>
+        </tr>
+
+        <tr>
+          <td>Lowercase</td>
+          <td><code>toLowerCase()</code></td>
+          <td><code>lower()</code></td>
+        </tr>
+
+        <tr>
+          <td>Length of string</td>
+          <td><code>msg.length</code></td>
+          <td><code>len(msg)</code></td>
+        </tr>
+
+        <tr>
+          <td>Check substring</td>
+          <td>
+            <code>msg.includes('Python')</code>
+            <code>!msg.includes('Python')</code>
+          </td>
+          <td>
+            <code>'Python' in msg</code>
+            <code>'Python' not in msg</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Slice string</td>
+          <td><code>msg.slice(2)</code></td>
+          <td><code>msg[2:]</code></td>
+        </tr>
+
+        <tr>
+          <td>Find substring index</td>
+          <td><code>msg.find('H')</code></td>
+          <td><code>msg.find('H')</code></td>
+        </tr>
+
+        <tr>
+          <td>Replace substring</td>
+          <td><code>replace()</code></td>
+          <td><code>replace()</code></td>
+        </tr>
+
+        <tr>
+          <td>Count substring occurrences</td>
+          <td>
+            <pre>
+              <code>
+                const count = fruits.reduce((tally, fruit) => {
+                  return tally + (fruit === 'Orange')
+                }, 0)
+                </code>
+            </pre>
+          </td>
+          <td><code>fruits.count('Orange')</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Arrays</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Collection type</td>
+          <td><code>// Arrays can contain mixed types</code></td>
+          <td><code># Lists can contain mixed types</code></td>
+        </tr>
+
+        <tr>
+          <td>Length</td>
+          <td><code>fruits.length</code></td>
+          <td><code>len(fruits)</code></td>
+        </tr>
+
+        <tr>
+          <td>Last element</td>
+          <td><code>fruits.at(-1)</code></td>
+          <td><code>fruits[-1]</code></td>
+        </tr>
+
+        <tr>
+          <td>Slice</td>
+          <td><code>fruits.slice(2,4)</code></td>
+          <td><code>fruits[2:4]</code></td>
+        </tr>
+
+        <tr>
+          <td>Find index</td>
+          <td><code>fruits.findIndex(f =&gt; f === 'Orange')</code></td>
+          <td><code>fruits.index('Orange')</code></td>
+        </tr>
+
+        <tr>
+          <td>Count occurrences</td>
+          <td>
+            <code
+              >const count = fruits.reduce((tally, fruit) =&gt; { return tally +
+              (fruit === 'Orange') }, 0)</code
+            >
+          </td>
+          <td><code>fruits.count('Orange')</code></td>
+        </tr>
+
+        <tr>
+          <td>Sort</td>
+          <td><code>fruits.sort()</code></td>
+          <td><code>fruits.sort()</code></td>
+        </tr>
+
+        <tr>
+          <td>Reverse sort</td>
+          <td><code>fruits.sort().reverse()</code></td>
+          <td><code>fruits.sort(reverse=True)</code></td>
+        </tr>
+
+        <tr>
+          <td>Reverse order</td>
+          <td><code>fruits.reverse()</code></td>
+          <td><code>fruits.reverse()</code></td>
+        </tr>
+
+        <tr>
+          <td>Sorting numbers</td>
+          <td>
+            <code
+              >// JS sorts numbers as strings by default tally.sort((a, b) =&gt;
+              b - a)</code
+            >
+          </td>
+          <td><code># Works normally for numbers tally.sort()</code></td>
+        </tr>
+
+        <tr>
+          <td>Minimum value</td>
+          <td>
+            <code
+              >tally.reduce((a, b) =&gt; Math.min(a, b)) // Alternative but
+              slower for large arrays Math.min(...tally)</code
+            >
+          </td>
+          <td><code>min(tally)</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Arithmetic</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Floor division</td>
+          <td><code>Math.floor()</code></td>
+          <td><code>//</code></td>
+        </tr>
+
+        <tr>
+          <td>Round</td>
+          <td><code>Math.round()</code></td>
+          <td><code>round()</code></td>
+        </tr>
+
+        <tr>
+          <td>Power</td>
+          <td><code>Math.pow()</code></td>
+          <td><code>**</code></td>
+        </tr>
+
+        <tr>
+          <td>Number formatting</td>
+          <td><code>// no direct equivalent</code></td>
+          <td><code>f"{variable:.2f}"</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

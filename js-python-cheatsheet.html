@@ -164,7 +164,7 @@
           <td>Title Case</td>
           <td>
             <code class="code-block">
-              <span>// no direct equivalent</span>
+              <span>// No direct equivalent</span>
             </code>
           </td>
           <td>
@@ -195,7 +195,7 @@
         </tr>
 
         <tr>
-          <td>Length of string</td>
+          <td>Length of String</td>
           <td>
             <code class="code-block"><span>msg.length</span></code>
           </td>
@@ -205,7 +205,7 @@
         </tr>
 
         <tr>
-          <td>Check substring</td>
+          <td>Check Substring</td>
           <td>
             <code class="code-block">
               <span>msg.includes('Python')</span>
@@ -221,7 +221,22 @@
         </tr>
 
         <tr>
-          <td>Slice string</td>
+          <td>Count Substring Occurrence</td>
+          <td>
+            <code class="code-block">
+              <span>// No direct equivalent</span>
+              <span>// Use Regex</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>msg.count('Python')</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Slice String</td>
           <td>
             <code class="code-block"><span>msg.slice(2)</span></code>
           </td>
@@ -231,9 +246,14 @@
         </tr>
 
         <tr>
-          <td>Find substring index</td>
+          <td>Find Substring Index</td>
           <td>
-            <code class="code-block"><span>msg.find('H')</span></code>
+            <code class="code-block">
+              <span>// No direct equivalent</span>
+              <span>
+                // Closer concept: findIndex() but it takes in a callback
+              </span>
+            </code>
           </td>
           <td>
             <code class="code-block"><span>msg.find('H')</span></code>
@@ -241,12 +261,16 @@
         </tr>
 
         <tr>
-          <td>Replace substring</td>
+          <td>Replace Substring</td>
           <td>
-            <code class="code-block"><span>replace()</span></code>
+            <code class="code-block">
+              <span>sentence.replace('JavaScript', 'Python')</span>
+            </code>
           </td>
           <td>
-            <code class="code-block"><span>replace()</span></code>
+            <code class="code-block">
+              <span>sentence.replace('JavaScript', 'Python')</span>
+            </code>
           </td>
         </tr>
       </tbody>
@@ -263,16 +287,16 @@
       </thead>
       <tbody>
         <tr>
-          <td>Collection type</td>
+          <td>Collection Type</td>
           <td>
-            <code class="code-block"
-              ><span>// Arrays can contain mixed types</span></code
-            >
+            <code class="code-block">
+              <span>// Arrays can contain mixed types</span>
+            </code>
           </td>
           <td>
-            <code class="code-block"
-              ><span># Lists can contain mixed types</span></code
-            >
+            <code class="code-block">
+              <span># Lists can contain mixed types</span>
+            </code>
           </td>
         </tr>
 
@@ -287,12 +311,28 @@
         </tr>
 
         <tr>
-          <td>Last element</td>
+          <td>Last Element</td>
           <td>
             <code class="code-block"><span>fruits.at(-1)</span></code>
           </td>
           <td>
             <code class="code-block"><span>fruits[-1]</span></code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Count Occurrences</td>
+          <td>
+            <code class="code-block">
+              <span>
+                fruits.reduce((tally, fruit) => {
+                  return tally + (fruit === 'Orange')
+                }, 0)
+              </span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block"><span>fruits.count('Orange')</span></code>
           </td>
         </tr>
 
@@ -307,7 +347,7 @@
         </tr>
 
         <tr>
-          <td>Find index</td>
+          <td>Find Index</td>
           <td>
             <code class="code-block">
               <span>fruits.findIndex(f => f === 'Orange')</span>
@@ -331,19 +371,19 @@
         </tr>
 
         <tr>
-          <td>Reverse sort</td>
+          <td>Reverse Sort</td>
           <td>
             <code class="code-block"><span>fruits.sort().reverse()</span></code>
           </td>
           <td>
-            <code class="code-block"
-              ><span>fruits.sort(reverse=True)</span></code
-            >
+            <code class="code-block">
+              <span>fruits.sort(reverse=True)</span>
+            </code>
           </td>
         </tr>
 
         <tr>
-          <td>Reverse order</td>
+          <td>Reverse Order</td>
           <td>
             <code class="code-block"><span>fruits.reverse()</span></code>
           </td>
@@ -353,7 +393,7 @@
         </tr>
 
         <tr>
-          <td>Sorting numbers</td>
+          <td>Sorting Numbers</td>
           <td>
             <code class="code-block">
               <span>// JS sorts numbers as strings by default</span>
@@ -369,7 +409,7 @@
         </tr>
 
         <tr>
-          <td>Minimum value</td>
+          <td>Minimum Value</td>
           <td>
             <code class="code-block">
               <span>tally.reduce((a, b) => Math.min(a, b))</span>
@@ -397,7 +437,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>Floor division</td>
+          <td>Floor Division</td>
           <td>
             <code class="code-block"><span>Math.floor()</span></code>
           </td>
@@ -419,7 +459,10 @@
         <tr>
           <td>Power</td>
           <td>
-            <code class="code-block"><span>Math.pow()</span></code>
+            <code class="code-block">
+              <span>Math.pow()</span>
+              <span>**</span>
+            </code>
           </td>
           <td>
             <code class="code-block"><span>**</span></code>
@@ -427,12 +470,12 @@
         </tr>
 
         <tr>
-          <td>Number formatting</td>
+          <td>Number Formatting</td>
           <td>
-            <code class="code-block"><span>// no direct equivalent</span></code>
+            <code class="code-block"><span>price.toFixed(2)</span></code>
           </td>
           <td>
-            <code class="code-block"><span>f"{variable:.2f}"</span></code>
+            <code class="code-block"><span>f"{price:.2f}"</span></code>
           </td>
         </tr>
       </tbody>

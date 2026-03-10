@@ -55,8 +55,16 @@
         font-family: Consolas, Monaco, monospace;
       }
 
-      code.code-block span {
+      code.code-block > span {
         display: block;
+      }
+
+      code.code-block .indent-1 {
+        padding-left: 2ch;
+      }
+
+      code.code-block .indent-2 {
+        padding-left: 4ch;
       }
     </style>
   </head>
@@ -264,12 +272,34 @@
           <td>Replace Substring</td>
           <td>
             <code class="code-block">
+              <span>// Strings are immutable</span>
               <span>sentence.replace('JavaScript', 'Python')</span>
             </code>
           </td>
           <td>
             <code class="code-block">
+              <span>// Strings are immutable</span>
               <span>sentence.replace('JavaScript', 'Python')</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Split Strings</td>
+          <td>
+            <code class="code-block">
+              <span> msg.split(' ') // Splits by a single space </span>
+              <span>
+                msg.split()&nbsp;&nbsp;&nbsp;&nbsp;// Returns original array
+              </span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span> msg.split(' ') // Splits by a single space </span>
+              <span>
+                msg.split()&nbsp;&nbsp;&nbsp;&nbsp;// Splits by spaces
+              </span>
             </code>
           </td>
         </tr>
@@ -324,11 +354,9 @@
           <td>Count Occurrences</td>
           <td>
             <code class="code-block">
-              <span>
-                fruits.reduce((tally, fruit) => {
-                  return tally + (fruit === 'Orange')
-                }, 0)
-              </span>
+              <span>fruits.reduce((tally, fruit) => {</span>
+              <span class="indent-1">return tally + (fruit === 'Orange')</span>
+              <span>}, 0)</span>
             </code>
           </td>
           <td>
@@ -420,6 +448,330 @@
           <td>
             <code class="code-block">
               <span>min(tally)</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Maximum Value</td>
+          <td>
+            <code class="code-block">
+              <span>tally.reduce((total, n) => total + n, 0)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>max(tally)</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Combine Two Arrays</td>
+          <td>
+            <code class="code-block">
+              <span>const fruitsAndVeggies = fruits.concat(veggies)</span>
+            </code>
+          </td>
+
+          <td>
+            <code class="code-block">
+              <span>fruits_and_veggies = fruits + veggies</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Extend Existing Array</td>
+          <td>
+            <code class="code-block">
+              <span>fruits.push(...veggies)</span>
+            </code>
+          </td>
+
+          <td>
+            <code class="code-block">
+              <span>fruits.extend(veggies)</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Add Element to End</td>
+          <td>
+            <code class="code-block">
+              <span>fruits.push('Mango')</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits.append('Mango')</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Insert at Specific Index</td>
+          <td>
+            <code class="code-block">
+              <span>fruits.splice(index, 0, 'Mango')</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits.insert(index, 'Mango')</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Remove First Occurrence</td>
+          <td>
+            <code class="code-block">
+              <span>const i = fruits.indexOf('Orange')</span>
+              <span>if (i !== -1) fruits.splice(i, 1)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits.remove('Orange')</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Remove Last Element</td>
+          <td>
+            <code class="code-block">
+              <span>fruits.pop()</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits.pop()</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Remove at Specific Index</td>
+          <td>
+            <code class="code-block">
+              <span>fruits.splice(2, 1)</span>
+              <span>fruits.splice(-2, 1)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits.pop(2)</span>
+              <span>fruits.pop(-2)</span>
+              <span>del fruits[2]</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Empty an Array</td>
+          <td>
+            <code class="code-block">
+              <span>fruits = []</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits = []</span>
+              <span>fruits.clear()</span>
+              <span>fruits = list()</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Shallow Copy</td>
+          <td>
+            <code class="code-block">
+              <span>const newFruits = [...fruits]</span>
+              <span>const newFruits = fruits.slice()</span>
+              <span>const newFruits = Array.from(fruits)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>new_fruits = fruits[:]</span>
+              <span>new_fruits = fruits.copy()</span>
+              <span>new_fruits = list(fruits)</span>
+            </code>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Deep Copy</td>
+          <td>
+            <code class="code-block">
+              <span>const newEmployees = structuredClone(employees)</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>import copy</span>
+              <span>new_employees = copy.deepcopy(employees)</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Join to String</td>
+          <td>
+            <code class="code-block">
+              <span>fruits.join(',')</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>','.join(fruits)</span>
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Tuples</h2>
+    <p>An ordered, fixed-sized collection of elements.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Declaration</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>// No direct equivalent, closest:</span>
+                <span>const fruits = Object.freeze('Orange', 'Apple')</span>
+              </code>
+              <code class="code-block">
+                <span>// Note that the TS Tuple has a different meaning</span>
+                <span>
+                  // It enforces specific types per index, and it is mutable.
+                </span>
+                <span> let fruits : [name: string, count: int] </span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>// Faster access because of immutability</span>
+              <span>fruits = ('Orange', 'Apple')</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Empty a Tuple</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>// No direct equivalent</span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>fruits = ()</span>
+              <span>fruits = tuple()</span>
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Sets</h2>
+    <p>A collection of unique values.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Declaration</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>const myFriends = new Set(['Ros', 'Fe', 'Ros'])</span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>my_friends = {'Ros', 'Fe', 'Ros'}</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Intersection</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>myFriends.intersection(yourFriends)</span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>my_friends.intersect(yourFriends)</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Difference</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>myFriends.difference(yourFriends)</span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>my_friends.difference(yourFriends)</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Union</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>myFriends.union(yourFriends)</span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>my_friends.union(yourFriends)</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Empty a Set</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>myFriends.clear()</span>
+                <span>myFriends = new Set([])</span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>myFriends = set()</span>
             </code>
           </td>
         </tr>

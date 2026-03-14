@@ -39,10 +39,6 @@ code {
   color: #152033;
 }
 
-.stack > code {
-  overflow-x: auto;
-}
-
 code > span {
   display: block;
   white-space: pre;
@@ -118,6 +114,7 @@ code > span {
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 th,
@@ -135,6 +132,7 @@ th {
 
 thead th:first-child,
 tbody td:first-child {
+  width: 18%;
   font-weight: 600;
 }
 
@@ -156,7 +154,7 @@ tbody td:first-child {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 992px) {
   .app-shell {
     width: min(100% - 1rem, 1200px);
     padding-top: 1.2rem;

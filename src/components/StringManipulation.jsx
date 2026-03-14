@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function StringManipulationSection() {
+export default function StringManipulation() {
   const rows = [
     {
       description: 'Capitalize first letter',
@@ -84,7 +84,5 @@ function StringManipulationSection() {
     },
   ]
 
-  return <CheatsheetSection title="String Manipulation" rows={rows} />
+  return <CheatSheet title="String Manipulation" rows={rows} />
 }
-
-export default StringManipulationSection

@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function TuplesSection() {
+export default function Tuples() {
   const rows = [
     {
       description: 'Declaration',
@@ -25,12 +25,10 @@ function TuplesSection() {
   ]
 
   return (
-    <CheatsheetSection
+    <CheatSheet
       title="Tuples"
       intro="An ordered, fixed-sized collection of elements."
       rows={rows}
     />
   )
 }
-
-export default TuplesSection

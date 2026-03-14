@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function ArithmeticSection() {
+export default function Arithmetic() {
   const rows = [
     {
       description: 'Floor Division',
@@ -24,7 +24,5 @@ function ArithmeticSection() {
     },
   ]
 
-  return <CheatsheetSection title="Arithmetic" rows={rows} />
+  return <CheatSheet title="Arithmetic" rows={rows} />
 }
-
-export default ArithmeticSection

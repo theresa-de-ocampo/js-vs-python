@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function FunctionsSection() {
+export default function Functions() {
   const rows = [
     {
       description: 'Default Parameter Behavior',
@@ -48,7 +48,5 @@ function FunctionsSection() {
     },
   ]
 
-  return <CheatsheetSection title="Functions" rows={rows} />
+  return <CheatSheet title="Functions" rows={rows} />
 }
-
-export default FunctionsSection

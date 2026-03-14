@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function SetsSection() {
+export default function Sets() {
   const rows = [
     {
       description: 'Declaration',
@@ -35,12 +35,10 @@ function SetsSection() {
   ]
 
   return (
-    <CheatsheetSection
+    <CheatSheet
       title="Sets"
       intro="A collection of unique values."
       rows={rows}
     />
   )
 }
-
-export default SetsSection

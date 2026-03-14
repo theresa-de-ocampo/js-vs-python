@@ -22,7 +22,7 @@ function CodeStack({ blocks }) {
   )
 }
 
-function CheatsheetSection({ title, intro, rows }) {
+export default function CheatSheet({ title, intro, rows }) {
   return (
     <section className="cheatsheet-section">
       <div className="section-heading">
@@ -57,5 +57,3 @@ function CheatsheetSection({ title, intro, rows }) {
     </section>
   )
 }
-
-export default CheatsheetSection

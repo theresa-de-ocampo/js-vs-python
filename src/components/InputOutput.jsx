@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function InputOutputSection() {
+export default function InputOutput() {
   const rows = [
     {
       description: 'Logging',
@@ -24,7 +24,5 @@ function InputOutputSection() {
     },
   ]
 
-  return <CheatsheetSection title="Input & Output" rows={rows} />
+  return <CheatSheet title="Input & Output" rows={rows} />
 }
-
-export default InputOutputSection

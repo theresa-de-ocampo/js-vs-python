@@ -1,23 +1,23 @@
-import ArraysSection from './components/sections/ArraysSection.jsx'
-import ArithmeticSection from './components/sections/ArithmeticSection.jsx'
-import CommentsSection from './components/sections/CommentsSection.jsx'
-import FunctionsSection from './components/sections/FunctionsSection.jsx'
-import InputOutputSection from './components/sections/InputOutputSection.jsx'
-import SetsSection from './components/sections/SetsSection.jsx'
-import StringManipulationSection from './components/sections/StringManipulationSection.jsx'
-import TuplesSection from './components/sections/TuplesSection.jsx'
-import TypesAndTypeCheckingSection from './components/sections/TypesAndTypeCheckingSection.jsx'
+import Arrays from './components/Arrays.jsx'
+import Arithmetic from './components/Arithmetic.jsx'
+import Comments from './components/Comments.jsx'
+import Functions from './components/Functions.jsx'
+import InputOutput from './components/InputOutput.jsx'
+import Sets from './components/Sets.jsx'
+import StringManipulation from './components/StringManipulation.jsx'
+import Tuples from './components/Tuples.jsx'
+import TypesAndTypeChecking from './components/TypesAndTypeChecking.jsx'
 
 const sections = [
-  InputOutputSection,
-  CommentsSection,
-  StringManipulationSection,
-  ArraysSection,
-  TuplesSection,
-  SetsSection,
-  ArithmeticSection,
-  TypesAndTypeCheckingSection,
-  FunctionsSection,
+  InputOutput,
+  Comments,
+  StringManipulation,
+  Arrays,
+  Tuples,
+  Sets,
+  Arithmetic,
+  TypesAndTypeChecking,
+  Functions,
 ]
 
 function App() {

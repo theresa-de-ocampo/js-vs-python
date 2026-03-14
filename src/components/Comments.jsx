@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function CommentsSection() {
+export default function Comments() {
   const rows = [
     {
       description: 'Single Line Comment',
@@ -27,7 +27,5 @@ function CommentsSection() {
     },
   ]
 
-  return <CheatsheetSection title="Comments" rows={rows} />
+  return <CheatSheet title="Comments" rows={rows} />
 }
-
-export default CommentsSection

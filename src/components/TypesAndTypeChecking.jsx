@@ -1,6 +1,6 @@
-import CheatsheetSection from '../CheatsheetSection.jsx'
+import CheatSheet from './generic/CheatSheet.jsx'
 
-function TypesAndTypeCheckingSection() {
+export default function TypesAndTypeChecking() {
   const rows = [
     {
       description: 'No Value',
@@ -14,7 +14,5 @@ function TypesAndTypeCheckingSection() {
     },
   ]
 
-  return <CheatsheetSection title="Types & Type Checking" rows={rows} />
+  return <CheatSheet title="Types & Type Checking" rows={rows} />
 }
-
-export default TypesAndTypeCheckingSection

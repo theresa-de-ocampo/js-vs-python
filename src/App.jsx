@@ -1,12 +1,12 @@
-import Arrays from './components/Arrays.jsx'
-import Arithmetic from './components/Arithmetic.jsx'
-import Comments from './components/Comments.jsx'
-import Functions from './components/Functions.jsx'
-import InputOutput from './components/InputOutput.jsx'
-import Sets from './components/Sets.jsx'
-import StringManipulation from './components/StringManipulation.jsx'
-import Tuples from './components/Tuples.jsx'
-import TypesAndTypeChecking from './components/TypesAndTypeChecking.jsx'
+import Arrays from "./components/Arrays.jsx";
+import Arithmetic from "./components/Arithmetic.jsx";
+import Comments from "./components/Comments.jsx";
+import Functions from "./components/Functions.jsx";
+import InputOutput from "./components/InputOutput.jsx";
+import Sets from "./components/Sets.jsx";
+import StringManipulation from "./components/StringManipulation.jsx";
+import Tuples from "./components/Tuples.jsx";
+import TypesAndTypeChecking from "./components/TypesAndTypeChecking.jsx";
 
 const sections = [
   InputOutput,
@@ -17,8 +17,8 @@ const sections = [
   Sets,
   Arithmetic,
   TypesAndTypeChecking,
-  Functions,
-]
+  Functions
+];
 
 function App() {
   return (
@@ -27,8 +27,11 @@ function App() {
         <p className="eyebrow">Learning Notes</p>
         <h1>JavaScript vs Python Cheat Sheet</h1>
         <p className="page-intro">
-          Migrated from the original single HTML file into a Vite + React app,
-          with one component per cheatsheet section.
+          Written by{" "}
+          <a href="https://www.linkedin.com/in/ma-theresa7/">Teriz De Ocampo</a>
+          . You can check out this{" "}
+          <a href="https://github.com/theresa-de-ocampo/js-vs-python">repo</a>{" "}
+          if you wish to contribute.
         </p>
       </header>
 
@@ -38,7 +41,7 @@ function App() {
         ))}
       </div>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -79,8 +79,13 @@ export default function Arrays() {
     },
     {
       description: "Maximum Value",
-      javascript: [["tally.reduce((total, n) => total + n, 0)"]],
+      javascript: [["tally.reduce((a, b) => Math.max(a, b))"]],
       python: [["max(tally)"]]
+    },
+    {
+      description: "Sum Values",
+      javascript: [["tally.reduce((total, n) => total + n, 0)"]],
+      python: [["sum(tally)"]]
     },
     {
       description: "Combine Two Arrays",

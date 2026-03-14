@@ -1,13 +1,13 @@
 function renderLine(line, index) {
-  if (typeof line === 'string') {
-    return <span key={index}>{line}</span>
+  if (typeof line === "string") {
+    return <span key={index}>{line}</span>;
   }
 
   return (
     <span key={index} className={line.className}>
       {line.text}
     </span>
-  )
+  );
 }
 
 function CodeStack({ blocks }) {
@@ -19,7 +19,7 @@ function CodeStack({ blocks }) {
         </code>
       ))}
     </div>
-  )
+  );
 }
 
 export default function CheatSheet({ title, intro, rows }) {
@@ -30,30 +30,28 @@ export default function CheatSheet({ title, intro, rows }) {
         {intro ? <p>{intro}</p> : null}
       </div>
 
-      <div className="table-scroll">
-        <table>
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th>JavaScript</th>
-              <th>Python</th>
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>JavaScript</th>
+            <th>Python</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.description}>
+              <td data-label="Description">{row.description}</td>
+              <td data-label="JavaScript">
+                <CodeStack blocks={row.javascript} />
+              </td>
+              <td data-label="Python">
+                <CodeStack blocks={row.python} />
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <tr key={row.description}>
-                <td>{row.description}</td>
-                <td>
-                  <CodeStack blocks={row.javascript} />
-                </td>
-                <td>
-                  <CodeStack blocks={row.python} />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </section>
-  )
+  );
 }

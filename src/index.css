@@ -78,7 +78,6 @@ code > span {
 }
 
 .page-intro {
-  max-width: 60ch;
   margin: 0.9rem 0 0;
   color: #475569;
 }
@@ -169,8 +168,9 @@ tbody td:first-child {
 
 @media (max-width: 992px) {
   .app-shell {
-    width: min(100% - 1rem, 1200px);
-    padding-top: 1.2rem;
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2.5rem 0 4rem;
   }
 
   .page-header h1 {

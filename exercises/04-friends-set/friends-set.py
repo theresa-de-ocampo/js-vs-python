@@ -11,7 +11,19 @@ friends = {"John", "Michael", "Terry", "Eric", "Graham"}
 my_friends = {"Reg", "Loretta", "Colin", "John", "Graham"}
 cars = ["900", "420", "V70", "911", "996", "V90", "911", "911", "S", "328", "900"]
 
-if "eric" in friends and "john" in friends:
-    print("1. True, both Eric and John are in `friends`.")
-else:
-    print("1. False, Eric and John are not in `friends`.")
+print(f"1. {'Eric' in friends and 'John' in friends}")
+
+all_friends = friends.union(my_friends)
+print(f"2. {all_friends}")
+
+common_friends = friends.intersection(my_friends)
+print(f"3. {common_friends}")
+
+only_in_friends = friends.difference(my_friends)
+print(f"4. {only_in_friends}")
+
+unique_friends = friends.symmetric_difference(my_friends)
+print(f"5. {unique_friends}")
+
+deduplicated_cars = set(cars)
+print(f"6. {deduplicated_cars}")

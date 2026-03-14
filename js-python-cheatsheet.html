@@ -144,6 +144,57 @@
       </tbody>
     </table>
 
+    <h2>Comments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Single Line Comment</td>
+          <td>
+            <code class="code-block">
+              <span>// This is a comment</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span># This is a comment</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Multi Line Comment</td>
+          <td>
+            <code class="code-block">
+              <span>/*</span>
+              <span>This is a multiline</span>
+              <span>comment</span>
+              <span>*/</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>'''</span>
+              <span>Python does not have a dedicated syntax</span>
+              <span>for multiline comments.</span>
+              <span>The use of triple quotes is discouraged</span>
+              <span>as it is actually a string literal.</span>
+              <span>If it appears on top of a module, class, or function,</span>
+              <span>Python treats it as a docstring.</span>
+              <span>So using triple quotes can accidentally</span>
+              <span>modify documentation.</span>
+              <span>'''</span>
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <h2>String Manipulation</h2>
     <table>
       <thead>
@@ -725,7 +776,8 @@
           </td>
           <td>
             <code class="code-block">
-              <span>my_friends.intersect(yourFriends)</span>
+              <span>my_friends.intersection(your_friends)</span>
+              <span>my_friends & your_friends</span>
             </code>
           </td>
         </tr>
@@ -740,7 +792,8 @@
           </td>
           <td>
             <code class="code-block">
-              <span>my_friends.difference(yourFriends)</span>
+              <span>my_friends.difference(your_friends)</span>
+              <span>my_friends - your_friends</span>
             </code>
           </td>
         </tr>
@@ -755,7 +808,24 @@
           </td>
           <td>
             <code class="code-block">
-              <span>my_friends.union(yourFriends)</span>
+              <span>my_friends.union(your_friends)</span>
+              <span>my_friends | your_friends</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Symmetric Difference</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>myFriends.symmetricDifference(yourFriends)</span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>my_friends.symmetric_difference(your_friends)</span>
+              <span>my_friends ^ your_friends</span>
             </code>
           </td>
         </tr>
@@ -771,7 +841,7 @@
           </td>
           <td>
             <code class="code-block">
-              <span>myFriends = set()</span>
+              <span>my_friends = set()</span>
             </code>
           </td>
         </tr>
@@ -828,6 +898,148 @@
           </td>
           <td>
             <code class="code-block"><span>f"{price:.2f}"</span></code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Types & Type Checking</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>No Value</td>
+          <td>
+            <code class="code-block">
+              <span>null</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>None</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Get Variable Type</td>
+          <td>
+            <code class="code-block">
+              <span>typeof value</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>type(value)</span>
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Functions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default Parameter Behavior</td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>function greeting(name, age=18) { /* body */ }</span>
+              </code>
+              <code class="code-block">
+                <span>
+                  greeting('Teriz')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+                  Default Used
+                </span>
+                <span>greeting('Teriz', undefined) // Default Used</span>
+                <span>
+                  greeting('Teriz', null)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+                  Default NOT Used
+                </span>
+              </code>
+            </div>
+          </td>
+          <td>
+            <div class="stack">
+              <code class="code-block">
+                <span>def greeting(name, age=18):</span>
+                <span class="indent-1"># body</span>
+              </code>
+              <code class="code-block">
+                <span>
+                  greeting('Teriz')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#
+                  Default used
+                </span>
+                <span>greeting('Teriz', None) # Default NOT used</span>
+              </code>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Named Function Arguments</td>
+          <td>
+            <code class="code-block">
+              <span>// JS does not support named arguments</span>
+              <span>// but you can do:</span>
+              <span>greeting({ name: 'Teriz', age: 26})</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>greeting(name='Teriz', age=26)</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Return a Tuple</td>
+          <td>
+            <code class="code-block">
+              <span>// No direct equivalent</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>return amount, tax, total amount</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Return a Set</td>
+          <td>
+            <code class="code-block">
+              <span>// No direct equivalent</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>return { amount, tax, total amount }</span>
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>Return an Object</td>
+          <td>
+            <code class="code-block">
+              <span>return { amount, tax, total amount }</span>
+            </code>
+          </td>
+          <td>
+            <code class="code-block">
+              <span>// TODO: After refresher on dictionaries</span>
+            </code>
           </td>
         </tr>
       </tbody>

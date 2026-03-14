@@ -46,7 +46,7 @@
         gap: 6px;
       }
 
-      code.code-block {
+      code {
         display: block;
         background: #f6f8fa;
         border: 1px solid #ddd;
@@ -55,15 +55,15 @@
         font-family: Consolas, Monaco, monospace;
       }
 
-      code.code-block > span {
+      code > span {
         display: block;
       }
 
-      code.code-block .indent-1 {
+      code .indent-1 {
         padding-left: 2ch;
       }
 
-      code.code-block .indent-2 {
+      code .indent-2 {
         padding-left: 4ch;
       }
     </style>
@@ -85,12 +85,12 @@
           <td>Logging</td>
           <td>
             <div class="stack">
-              <code class="code-block"><span>console.log()</span></code>
+              <code><span>console.log()</span></code>
             </div>
           </td>
           <td>
             <div class="stack">
-              <code class="code-block"><span>print()</span></code>
+              <code><span>print()</span></code>
             </div>
           </td>
         </tr>
@@ -99,22 +99,22 @@
           <td>User Input</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>// Method 1</span>
                 <span>process.argv.slice(2)</span>
               </code>
 
-              <code class="code-block">
+              <code>
                 <span>// Method 2</span>
                 <span>// Built-in readline module</span>
               </code>
 
-              <code class="code-block">
+              <code>
                 <span>// Method 3</span>
                 <span>// readline-sync package</span>
               </code>
 
-              <code class="code-block">
+              <code>
                 <span>// Method 4 (browser)</span>
                 <span>prompt()</span>
               </code>
@@ -123,7 +123,7 @@
 
           <td>
             <div class="stack">
-              <code class="code-block"><span>input()</span></code>
+              <code><span>input()</span></code>
             </div>
           </td>
         </tr>
@@ -132,12 +132,12 @@
           <td>String Interpolation</td>
           <td>
             <div class="stack">
-              <code class="code-block"><span>`Hi ${name}`</span></code>
+              <code><span>`Hi ${name}`</span></code>
             </div>
           </td>
           <td>
             <div class="stack">
-              <code class="code-block"><span>f"Hi {name}"</span></code>
+              <code><span>f"Hi {name}"</span></code>
             </div>
           </td>
         </tr>
@@ -157,12 +157,12 @@
         <tr>
           <td>Single Line Comment</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// This is a comment</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span># This is a comment</span>
             </code>
           </td>
@@ -170,7 +170,7 @@
         <tr>
           <td>Multi Line Comment</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>/*</span>
               <span>This is a multiline</span>
               <span>comment</span>
@@ -178,7 +178,7 @@
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>'''</span>
               <span>Python does not have a dedicated syntax</span>
               <span>for multiline comments.</span>
@@ -208,12 +208,12 @@
         <tr>
           <td>Capitalize first letter</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>str.charAt(0).toUpperCase() + str.slice(1)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>capitalize()</span>
             </code>
           </td>
@@ -222,12 +222,12 @@
         <tr>
           <td>Title Case</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// No direct equivalent</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>title()</span>
             </code>
           </td>
@@ -236,43 +236,43 @@
         <tr>
           <td>Uppercase</td>
           <td>
-            <code class="code-block"><span>toUpperCase()</span></code>
+            <code><span>toUpperCase()</span></code>
           </td>
           <td>
-            <code class="code-block"><span>upper()</span></code>
+            <code><span>upper()</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Lowercase</td>
           <td>
-            <code class="code-block"><span>toLowerCase()</span></code>
+            <code><span>toLowerCase()</span></code>
           </td>
           <td>
-            <code class="code-block"><span>lower()</span></code>
+            <code><span>lower()</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Length of String</td>
           <td>
-            <code class="code-block"><span>msg.length</span></code>
+            <code><span>msg.length</span></code>
           </td>
           <td>
-            <code class="code-block"><span>len(msg)</span></code>
+            <code><span>len(msg)</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Check Substring</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>msg.includes('Python')</span>
               <span>!msg.includes('Python')</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>'Python' in msg</span>
               <span>'Python' not in msg</span>
             </code>
@@ -282,13 +282,13 @@
         <tr>
           <td>Count Substring Occurrence</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// No direct equivalent</span>
               <span>// Use Regex</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>msg.count('Python')</span>
             </code>
           </td>
@@ -297,17 +297,17 @@
         <tr>
           <td>Slice String</td>
           <td>
-            <code class="code-block"><span>msg.slice(2)</span></code>
+            <code><span>msg.slice(2)</span></code>
           </td>
           <td>
-            <code class="code-block"><span>msg[2:]</span></code>
+            <code><span>msg[2:]</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Find Substring Index</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// No direct equivalent</span>
               <span>
                 // Closer concept: findIndex() but it takes in a callback
@@ -315,20 +315,20 @@
             </code>
           </td>
           <td>
-            <code class="code-block"><span>msg.find('H')</span></code>
+            <code><span>msg.find('H')</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Replace Substring</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// Strings are immutable</span>
               <span>sentence.replace('JavaScript', 'Python')</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// Strings are immutable</span>
               <span>sentence.replace('JavaScript', 'Python')</span>
             </code>
@@ -338,7 +338,7 @@
         <tr>
           <td>Split Strings</td>
           <td>
-            <code class="code-block">
+            <code>
               <span> msg.split(' ') // Splits by a single space </span>
               <span>
                 msg.split()&nbsp;&nbsp;&nbsp;&nbsp;// Returns original array
@@ -346,7 +346,7 @@
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span> msg.split(' ') // Splits by a single space </span>
               <span>
                 msg.split()&nbsp;&nbsp;&nbsp;&nbsp;// Splits by spaces
@@ -370,12 +370,12 @@
         <tr>
           <td>Collection Type</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// Arrays can contain mixed types</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span># Lists can contain mixed types</span>
             </code>
           </td>
@@ -384,56 +384,56 @@
         <tr>
           <td>Length</td>
           <td>
-            <code class="code-block"><span>fruits.length</span></code>
+            <code><span>fruits.length</span></code>
           </td>
           <td>
-            <code class="code-block"><span>len(fruits)</span></code>
+            <code><span>len(fruits)</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Last Element</td>
           <td>
-            <code class="code-block"><span>fruits.at(-1)</span></code>
+            <code><span>fruits.at(-1)</span></code>
           </td>
           <td>
-            <code class="code-block"><span>fruits[-1]</span></code>
+            <code><span>fruits[-1]</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Count Occurrences</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.reduce((tally, fruit) => {</span>
               <span class="indent-1">return tally + (fruit === 'Orange')</span>
               <span>}, 0)</span>
             </code>
           </td>
           <td>
-            <code class="code-block"><span>fruits.count('Orange')</span></code>
+            <code><span>fruits.count('Orange')</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Slice</td>
           <td>
-            <code class="code-block"><span>fruits.slice(2,4)</span></code>
+            <code><span>fruits.slice(2,4)</span></code>
           </td>
           <td>
-            <code class="code-block"><span>fruits[2:4]</span></code>
+            <code><span>fruits[2:4]</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Find Index</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.findIndex(f => f === 'Orange')</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.index('Orange')</span>
             </code>
           </td>
@@ -442,20 +442,20 @@
         <tr>
           <td>Sort</td>
           <td>
-            <code class="code-block"><span>fruits.sort()</span></code>
+            <code><span>fruits.sort()</span></code>
           </td>
           <td>
-            <code class="code-block"><span>fruits.sort()</span></code>
+            <code><span>fruits.sort()</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Reverse Sort</td>
           <td>
-            <code class="code-block"><span>fruits.sort().reverse()</span></code>
+            <code><span>fruits.sort().reverse()</span></code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.sort(reverse=True)</span>
             </code>
           </td>
@@ -464,23 +464,23 @@
         <tr>
           <td>Reverse Order</td>
           <td>
-            <code class="code-block"><span>fruits.reverse()</span></code>
+            <code><span>fruits.reverse()</span></code>
           </td>
           <td>
-            <code class="code-block"><span>fruits.reverse()</span></code>
+            <code><span>fruits.reverse()</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Sorting Numbers</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// JS sorts numbers as strings by default</span>
               <span>tally.sort((a, b) => b - a)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span># Works normally for numbers</span>
               <span>tally.sort()</span>
             </code>
@@ -490,14 +490,14 @@
         <tr>
           <td>Minimum Value</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>tally.reduce((a, b) => Math.min(a, b))</span>
               <span>// Alternative but slower for large arrays</span>
               <span>Math.min(...tally)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>min(tally)</span>
             </code>
           </td>
@@ -506,12 +506,12 @@
         <tr>
           <td>Maximum Value</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>tally.reduce((total, n) => total + n, 0)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>max(tally)</span>
             </code>
           </td>
@@ -520,13 +520,13 @@
         <tr>
           <td>Combine Two Arrays</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>const fruitsAndVeggies = fruits.concat(veggies)</span>
             </code>
           </td>
 
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits_and_veggies = fruits + veggies</span>
             </code>
           </td>
@@ -535,13 +535,13 @@
         <tr>
           <td>Extend Existing Array</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.push(...veggies)</span>
             </code>
           </td>
 
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.extend(veggies)</span>
             </code>
           </td>
@@ -550,12 +550,12 @@
         <tr>
           <td>Add Element to End</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.push('Mango')</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.append('Mango')</span>
             </code>
           </td>
@@ -564,12 +564,12 @@
         <tr>
           <td>Insert at Specific Index</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.splice(index, 0, 'Mango')</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.insert(index, 'Mango')</span>
             </code>
           </td>
@@ -578,13 +578,13 @@
         <tr>
           <td>Remove First Occurrence</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>const i = fruits.indexOf('Orange')</span>
               <span>if (i !== -1) fruits.splice(i, 1)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.remove('Orange')</span>
             </code>
           </td>
@@ -593,12 +593,12 @@
         <tr>
           <td>Remove Last Element</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.pop()</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.pop()</span>
             </code>
           </td>
@@ -607,13 +607,13 @@
         <tr>
           <td>Remove at Specific Index</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.splice(2, 1)</span>
               <span>fruits.splice(-2, 1)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.pop(2)</span>
               <span>fruits.pop(-2)</span>
               <span>del fruits[2]</span>
@@ -624,12 +624,12 @@
         <tr>
           <td>Empty an Array</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits = []</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits = []</span>
               <span>fruits.clear()</span>
               <span>fruits = list()</span>
@@ -640,14 +640,14 @@
         <tr>
           <td>Shallow Copy</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>const newFruits = [...fruits]</span>
               <span>const newFruits = fruits.slice()</span>
               <span>const newFruits = Array.from(fruits)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>new_fruits = fruits[:]</span>
               <span>new_fruits = fruits.copy()</span>
               <span>new_fruits = list(fruits)</span>
@@ -658,12 +658,12 @@
         <tr>
           <td>Deep Copy</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>const newEmployees = structuredClone(employees)</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>import copy</span>
               <span>new_employees = copy.deepcopy(employees)</span>
             </code>
@@ -672,12 +672,12 @@
         <tr>
           <td>Join to String</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits.join(',')</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>','.join(fruits)</span>
             </code>
           </td>
@@ -700,11 +700,11 @@
           <td>Declaration</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>// No direct equivalent, closest:</span>
                 <span>const fruits = Object.freeze('Orange', 'Apple')</span>
               </code>
-              <code class="code-block">
+              <code>
                 <span>// Note that the TS Tuple has a different meaning</span>
                 <span>
                   // It enforces specific types per index, and it is mutable.
@@ -714,7 +714,7 @@
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// Faster access because of immutability</span>
               <span>fruits = ('Orange', 'Apple')</span>
             </code>
@@ -724,13 +724,13 @@
           <td>Empty a Tuple</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>// No direct equivalent</span>
               </code>
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>fruits = ()</span>
               <span>fruits = tuple()</span>
             </code>
@@ -754,13 +754,13 @@
           <td>Declaration</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>const myFriends = new Set(['Ros', 'Fe', 'Ros'])</span>
               </code>
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>my_friends = {'Ros', 'Fe', 'Ros'}</span>
             </code>
           </td>
@@ -769,13 +769,13 @@
           <td>Intersection</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>myFriends.intersection(yourFriends)</span>
               </code>
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>my_friends.intersection(your_friends)</span>
               <span>my_friends & your_friends</span>
             </code>
@@ -785,13 +785,13 @@
           <td>Difference</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>myFriends.difference(yourFriends)</span>
               </code>
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>my_friends.difference(your_friends)</span>
               <span>my_friends - your_friends</span>
             </code>
@@ -801,13 +801,13 @@
           <td>Union</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>myFriends.union(yourFriends)</span>
               </code>
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>my_friends.union(your_friends)</span>
               <span>my_friends | your_friends</span>
             </code>
@@ -817,13 +817,13 @@
           <td>Symmetric Difference</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>myFriends.symmetricDifference(yourFriends)</span>
               </code>
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>my_friends.symmetric_difference(your_friends)</span>
               <span>my_friends ^ your_friends</span>
             </code>
@@ -833,14 +833,14 @@
           <td>Empty a Set</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>myFriends.clear()</span>
                 <span>myFriends = new Set([])</span>
               </code>
             </div>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>my_friends = set()</span>
             </code>
           </td>
@@ -861,43 +861,43 @@
         <tr>
           <td>Floor Division</td>
           <td>
-            <code class="code-block"><span>Math.floor()</span></code>
+            <code><span>Math.floor()</span></code>
           </td>
           <td>
-            <code class="code-block"><span>//</span></code>
+            <code><span>//</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Round</td>
           <td>
-            <code class="code-block"><span>Math.round()</span></code>
+            <code><span>Math.round()</span></code>
           </td>
           <td>
-            <code class="code-block"><span>round()</span></code>
+            <code><span>round()</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Power</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>Math.pow()</span>
               <span>**</span>
             </code>
           </td>
           <td>
-            <code class="code-block"><span>**</span></code>
+            <code><span>**</span></code>
           </td>
         </tr>
 
         <tr>
           <td>Number Formatting</td>
           <td>
-            <code class="code-block"><span>price.toFixed(2)</span></code>
+            <code><span>price.toFixed(2)</span></code>
           </td>
           <td>
-            <code class="code-block"><span>f"{price:.2f}"</span></code>
+            <code><span>f"{price:.2f}"</span></code>
           </td>
         </tr>
       </tbody>
@@ -916,12 +916,12 @@
         <tr>
           <td>No Value</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>null</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>None</span>
             </code>
           </td>
@@ -929,12 +929,12 @@
         <tr>
           <td>Get Variable Type</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>typeof value</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>type(value)</span>
             </code>
           </td>
@@ -956,10 +956,10 @@
           <td>Default Parameter Behavior</td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>function greeting(name, age=18) { /* body */ }</span>
               </code>
-              <code class="code-block">
+              <code>
                 <span>
                   greeting('Teriz')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
                   Default Used
@@ -974,11 +974,11 @@
           </td>
           <td>
             <div class="stack">
-              <code class="code-block">
+              <code>
                 <span>def greeting(name, age=18):</span>
                 <span class="indent-1"># body</span>
               </code>
-              <code class="code-block">
+              <code>
                 <span>
                   greeting('Teriz')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#
                   Default used
@@ -991,14 +991,14 @@
         <tr>
           <td>Named Function Arguments</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// JS does not support named arguments</span>
               <span>// but you can do:</span>
               <span>greeting({ name: 'Teriz', age: 26})</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>greeting(name='Teriz', age=26)</span>
             </code>
           </td>
@@ -1006,12 +1006,12 @@
         <tr>
           <td>Return a Tuple</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// No direct equivalent</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>return amount, tax, total amount</span>
             </code>
           </td>
@@ -1019,12 +1019,12 @@
         <tr>
           <td>Return a Set</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// No direct equivalent</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>return { amount, tax, total amount }</span>
             </code>
           </td>
@@ -1032,12 +1032,12 @@
         <tr>
           <td>Return an Object</td>
           <td>
-            <code class="code-block">
+            <code>
               <span>return { amount, tax, total amount }</span>
             </code>
           </td>
           <td>
-            <code class="code-block">
+            <code>
               <span>// TODO: After refresher on dictionaries</span>
             </code>
           </td>

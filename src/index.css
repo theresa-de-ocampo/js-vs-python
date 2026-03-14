@@ -168,9 +168,7 @@ tbody td:first-child {
 
 @media (max-width: 992px) {
   .app-shell {
-    width: min(1200px, calc(100% - 2rem));
-    margin: 0 auto;
-    padding: 2.5rem 0 4rem;
+    padding: 2.5rem 4rem 4rem;
   }
 
   .page-header h1 {
@@ -252,5 +250,11 @@ tbody td:first-child {
   code {
     padding: 0.7rem 0.8rem;
     font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    padding: 2.5rem 0 4rem;
   }
 }

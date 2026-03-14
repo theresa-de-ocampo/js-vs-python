@@ -1,0 +1,162 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #18212f;
+  background:
+    radial-gradient(circle at top right, rgba(136, 173, 255, 0.18), transparent 24rem),
+    linear-gradient(180deg, #f5f7fb 0%, #eef3f8 100%);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+code {
+  display: block;
+  overflow-x: auto;
+  background: #f6f8fa;
+  border: 1px solid #d7dfeb;
+  border-radius: 0.85rem;
+  padding: 0.85rem 1rem;
+  font-family: Consolas, Monaco, 'Courier New', monospace;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #152033;
+}
+
+code > span {
+  display: block;
+  white-space: pre;
+}
+
+.indent-1 {
+  padding-left: 2ch;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #365a91;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+}
+
+.page-intro {
+  max-width: 60ch;
+  margin: 0.9rem 0 0;
+  color: #475569;
+}
+
+.sections {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cheatsheet-section {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+}
+
+.section-heading {
+  margin-bottom: 0.85rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.section-heading p {
+  margin: 0.4rem 0 0;
+  color: #526277;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #d7dfeb;
+  padding: 0.9rem;
+  vertical-align: top;
+}
+
+th {
+  background: #edf3fb;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+tbody td:first-child {
+  width: 20%;
+  min-width: 13rem;
+  font-weight: 600;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(100% - 1rem, 1200px);
+    padding-top: 1.2rem;
+  }
+
+  .cheatsheet-section {
+    padding: 0.9rem;
+    border-radius: 1rem;
+  }
+}

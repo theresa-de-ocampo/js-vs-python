@@ -26,13 +26,6 @@ body {
   min-width: 320px;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
 code {
   display: block;
   overflow-x: auto;
@@ -44,6 +37,10 @@ code {
   font-size: 0.92rem;
   line-height: 1.5;
   color: #152033;
+}
+
+.stack > code {
+  overflow-x: auto;
 }
 
 code > span {
@@ -118,13 +115,8 @@ code > span {
   color: #526277;
 }
 
-.table-scroll {
-  overflow-x: auto;
-}
-
 table {
   width: 100%;
-  min-width: 760px;
   border-collapse: collapse;
 }
 
@@ -141,9 +133,8 @@ th {
   font-size: 0.95rem;
 }
 
+thead th:first-child,
 tbody td:first-child {
-  width: 20%;
-  min-width: 13rem;
   font-weight: 600;
 }
 
@@ -151,6 +142,18 @@ tbody td:first-child {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+}
+
+@media (max-width: 1100px) {
+  th,
+  td {
+    padding: 0.75rem;
+  }
+
+  code {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+  }
 }
 
 @media (max-width: 720px) {

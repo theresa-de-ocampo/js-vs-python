@@ -1,8 +1,33 @@
 import CheatsheetSection from '../CheatsheetSection.jsx'
-import { cheatsheetSections } from '../../data/cheatsheetData.js'
 
 function CommentsSection() {
-  return <CheatsheetSection {...cheatsheetSections.comments} />
+  const rows = [
+    {
+      description: 'Single Line Comment',
+      javascript: [['// This is a comment']],
+      python: [['# This is a comment']],
+    },
+    {
+      description: 'Multi Line Comment',
+      javascript: [['/*', 'This is a multiline', 'comment', '*/']],
+      python: [
+        [
+          "'''",
+          'Python does not have a dedicated syntax',
+          'for multiline comments.',
+          'The use of triple quotes is discouraged',
+          'as it is actually a string literal.',
+          'If it appears on top of a module, class, or function,',
+          'Python treats it as a docstring.',
+          'So using triple quotes can accidentally',
+          'modify documentation.',
+          "'''",
+        ],
+      ],
+    },
+  ]
+
+  return <CheatsheetSection title="Comments" rows={rows} />
 }
 
 export default CommentsSection

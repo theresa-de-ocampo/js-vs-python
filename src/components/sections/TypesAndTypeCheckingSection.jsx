@@ -1,8 +1,20 @@
 import CheatsheetSection from '../CheatsheetSection.jsx'
-import { cheatsheetSections } from '../../data/cheatsheetData.js'
 
 function TypesAndTypeCheckingSection() {
-  return <CheatsheetSection {...cheatsheetSections.typesAndTypeChecking} />
+  const rows = [
+    {
+      description: 'No Value',
+      javascript: [['null']],
+      python: [['None']],
+    },
+    {
+      description: 'Get Variable Type',
+      javascript: [['typeof value']],
+      python: [['type(value)']],
+    },
+  ]
+
+  return <CheatsheetSection title="Types & Type Checking" rows={rows} />
 }
 
 export default TypesAndTypeCheckingSection

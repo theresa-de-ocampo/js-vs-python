@@ -42,11 +42,11 @@ export default function CheatSheet({ title, intro, rows }) {
           <tbody>
             {rows.map((row) => (
               <tr key={row.description}>
-                <td>{row.description}</td>
-                <td>
+                <td data-label="Description">{row.description}</td>
+                <td data-label="JavaScript">
                   <CodeStack blocks={row.javascript} />
                 </td>
-                <td>
+                <td data-label="Python">
                   <CodeStack blocks={row.python} />
                 </td>
               </tr>

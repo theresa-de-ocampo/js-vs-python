@@ -1,8 +1,12 @@
 :root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #18212f;
   background:
-    radial-gradient(circle at top right, rgba(136, 173, 255, 0.18), transparent 24rem),
+    radial-gradient(
+      circle at top right,
+      rgba(136, 173, 255, 0.18),
+      transparent 24rem
+    ),
     linear-gradient(180deg, #f5f7fb 0%, #eef3f8 100%);
   line-height: 1.5;
   font-weight: 400;
@@ -36,7 +40,7 @@ code {
   border: 1px solid #d7dfeb;
   border-radius: 0.85rem;
   padding: 0.85rem 1rem;
-  font-family: Consolas, Monaco, 'Courier New', monospace;
+  font-family: Consolas, Monaco, "Courier New", monospace;
   font-size: 0.92rem;
   line-height: 1.5;
   color: #152033;
@@ -155,8 +159,77 @@ tbody td:first-child {
     padding-top: 1.2rem;
   }
 
+  .page-header h1 {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
   .cheatsheet-section {
     padding: 0.9rem;
     border-radius: 1rem;
+  }
+
+  table {
+    min-width: 0;
+    display: block;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  thead {
+    display: none;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tbody {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  tr {
+    border: 1px solid #d7dfeb;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  td {
+    border: none;
+    border-top: 1px solid #e5ebf3;
+    padding: 0.75rem 0.75rem 0.95rem;
+  }
+
+  tbody td:first-child {
+    width: 100%;
+    min-width: 0;
+    border-top: none;
+    font-weight: 700;
+    background: #edf3fb;
+  }
+
+  td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.45rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #365a91;
+  }
+
+  td:first-child::before {
+    margin-bottom: 0;
+  }
+
+  code {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.84rem;
   }
 }

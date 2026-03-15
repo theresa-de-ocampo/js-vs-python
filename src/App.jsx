@@ -1,8 +1,10 @@
 import Arrays from "./components/Arrays.jsx";
 import Arithmetic from "./components/Arithmetic.jsx";
 import Comments from "./components/Comments.jsx";
+import ComparisonsAndBooleans from "./components/ComparisonsAndBooleans.jsx";
 import Functions from "./components/Functions.jsx";
 import InputOutput from "./components/InputOutput.jsx";
+import Loops from "./components/Loops.jsx";
 import Sets from "./components/Sets.jsx";
 import StringManipulation from "./components/StringManipulation.jsx";
 import Tuples from "./components/Tuples.jsx";
@@ -17,7 +19,9 @@ const sections = [
   Sets,
   Arithmetic,
   TypesAndTypeChecking,
-  Functions
+  Functions,
+  ComparisonsAndBooleans,
+  Loops
 ];
 
 function App() {

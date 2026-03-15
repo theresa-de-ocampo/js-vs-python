@@ -38,13 +38,20 @@ export default function Arrays() {
     },
     {
       description: "Find Index",
-      javascript: [["fruits.findIndex(f => f === 'Orange')"]],
-      python: [["fruits.index('Orange')"]]
+      javascript: [
+        [
+          "fruits.findIndex(f => f === 'Orange')",
+          "fruits.findIndex(f => f === 'Broccoli') // -1"
+        ]
+      ],
+      python: [
+        ["fruits.index('Orange')", "fruits.index('Broccoli') // ValueError"]
+      ]
     },
     {
       description: "Sort",
-      javascript: [["fruits.sort()"]],
-      python: [["fruits.sort()"]]
+      javascript: [["fruits.sort()", "const sortedFruits = fruits.toSorted()"]],
+      python: [["fruits.sort()", "sorted_fruits = sorted(fruits)"]]
     },
     {
       description: "Reverse Sort",
@@ -53,18 +60,22 @@ export default function Arrays() {
     },
     {
       description: "Reverse Order",
-      javascript: [["fruits.reverse()"]],
-      python: [["fruits.reverse()"]]
+      javascript: [["fruits.reverse()", "fruits.toReversed()"]],
+      python: [["fruits.reverse()", "list(reversed(fruits))", "fruits[::-1]"]]
     },
     {
       description: "Sorting Numbers",
       javascript: [
         [
           "// JS sorts numbers as strings by default",
-          "tally.sort((a, b) => b - a)"
-        ]
+          "tally.sort((a, b) => a - b)"
+        ],
+        ["tally.toSorted((a, b) => Math.abs(a) - Math.abs(b))"]
       ],
-      python: [["# Works normally for numbers", "tally.sort()"]]
+      python: [
+        ["# Works normally for numbers", "tally.sort()"],
+        ["sorted(tally, key=abs)"]
+      ]
     },
     {
       description: "Minimum Value",

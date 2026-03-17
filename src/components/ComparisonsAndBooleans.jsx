@@ -41,7 +41,7 @@ export default function ComparisonsAndBooleans() {
     {
       description: "Truthy / Falsy",
       javascript: [["const fruits = []", "Boolean(fruits) // true"]],
-      python: [["fruits = []", "bool(fruits) // false"]]
+      python: [["fruits = []", "bool(fruits) // False"]]
     }
   ];
 

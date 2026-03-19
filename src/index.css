@@ -26,7 +26,7 @@ body {
   min-width: 320px;
 }
 
-code {
+.stack code {
   display: block;
   overflow-x: auto;
   background: #f6f8fa;
@@ -39,9 +39,20 @@ code {
   color: #152033;
 }
 
-code > span {
+.stack code > span {
   display: block;
   white-space: pre;
+}
+
+p code {
+  display: inline;
+  padding: 0.1rem 0.4rem;
+  background: rgba(237, 243, 251, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 0.45rem;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.9em;
+  color: #27415f;
 }
 
 .indent-1 {
@@ -160,7 +171,7 @@ tbody td:first-child {
     padding: 0.75rem;
   }
 
-  code {
+  .stack code {
     padding: 0.75rem 0.85rem;
     font-size: 0.88rem;
   }
@@ -247,7 +258,7 @@ tbody td:first-child {
     margin-bottom: 0;
   }
 
-  code {
+  .stack code {
     padding: 0.7rem 0.8rem;
     font-size: 0.84rem;
   }

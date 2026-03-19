@@ -37,23 +37,6 @@ export default function Arrays() {
       python: [["fruits[2:4]"]]
     },
     {
-      description: "Find Index",
-      javascript: [
-        [
-          "fruits.findIndex(f => f === 'Orange')",
-          "fruits.findIndex(f => f === 'Broccoli') // -1"
-        ]
-      ],
-      python: [
-        ["fruits.index('Orange')", "fruits.index('Broccoli') // ValueError"]
-      ]
-    },
-    {
-      description: "Checks if at least one element passes the test",
-      python: [["any(state == 'suspended' for state in states)"]],
-      javascript: [["states.some(state => state === 'suspended')"]]
-    },
-    {
       description: "Sort",
       javascript: [["fruits.sort()", "const sortedFruits = fruits.toSorted()"]],
       python: [["fruits.sort()", "sorted_fruits = sorted(fruits)"]]

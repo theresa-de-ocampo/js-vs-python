@@ -6,6 +6,7 @@ import Functions from "./components/Functions.jsx";
 import InputOutput from "./components/InputOutput.jsx";
 import KeyValuePairs from "./components/KeyValuePairs.jsx";
 import Loops from "./components/Loops.jsx";
+import SearchAndFiltering from "./components/SearchAndFiltering.jsx";
 import Sets from "./components/Sets.jsx";
 import StringManipulation from "./components/StringManipulation.jsx";
 import Tuples from "./components/Tuples.jsx";
@@ -23,7 +24,8 @@ const sections = [
   Functions,
   ComparisonsAndBooleans,
   Loops,
-  KeyValuePairs
+  KeyValuePairs,
+  SearchAndFiltering
 ];
 
 function App() {

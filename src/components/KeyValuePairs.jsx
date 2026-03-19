@@ -26,12 +26,12 @@ export default function KeyValuePairs() {
       ]
     },
     {
-      description: "Property Access",
+      description: "Get Value",
       javascript: [["employee.fname", "employee['fname']"]],
       python: [["employee['fname']"]]
     },
     {
-      description: "Access Non-Existent Property",
+      description: "Missing Property",
       javascript: [
         ["employee.salary // undefined", "employee.salary || 'not found'"]
       ],
@@ -44,12 +44,12 @@ export default function KeyValuePairs() {
       ]
     },
     {
-      description: "Update a Property",
+      description: "Update Value",
       javascript: [["employee.age = 27"]],
       python: [["employee['age'] = 27", "employee.update({ 'age': 27 })"]]
     },
     {
-      description: "Delete a Property",
+      description: "Delete Property",
       javascript: [["delete employee.age"]],
       python: [["del employee['age']"]]
     },
@@ -64,7 +64,7 @@ export default function KeyValuePairs() {
       python: [["employee.values()"]]
     },
     {
-      description: "Get Keys & Values",
+      description: "Get Entries",
       javascript: [
         ["Object.entries(employee)"],
         [
@@ -75,7 +75,7 @@ export default function KeyValuePairs() {
       python: [
         ["employee.items()"],
         [
-          "for k, k in employee.items():",
+          "for k, v in employee.items():",
           { text: "print(k, v)", className: "indent-1" }
         ]
       ]
@@ -86,19 +86,14 @@ export default function KeyValuePairs() {
       python: [["len(employee)"]]
     },
     {
-      description: "Check if Property Exists",
-      javascript: [["Object.hasOwn(employee, 'salary'))"]],
+      description: "Has Property",
+      javascript: [["Object.hasOwn(employee, 'salary')"]],
       python: [["'salary' in employee"]]
     },
     {
       description: "Merge Objects",
       javascript: [["{...order, ...payment}"]],
       python: [["{**order, **payment}"]]
-    },
-    {
-      description: "Find first element that passes the test",
-      javascript: [["employees.find(e => e.name === 'Teriz')"]],
-      python: [["next(e for e in employees if e['fname'] == 'Teriz')"]]
     }
   ];
 

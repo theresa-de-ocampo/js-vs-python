@@ -49,6 +49,11 @@ export default function Arrays() {
       ]
     },
     {
+      description: "Checks if at least one element passes the test",
+      python: [["any(state == 'suspended' for state in states)"]],
+      javascript: [["states.some(state => state === 'suspended')"]]
+    },
+    {
       description: "Sort",
       javascript: [["fruits.sort()", "const sortedFruits = fruits.toSorted()"]],
       python: [["fruits.sort()", "sorted_fruits = sorted(fruits)"]]

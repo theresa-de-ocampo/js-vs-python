@@ -4,6 +4,7 @@ import Comments from "./components/Comments.jsx";
 import ComparisonsAndBooleans from "./components/ComparisonsAndBooleans.jsx";
 import Functions from "./components/Functions.jsx";
 import InputOutput from "./components/InputOutput.jsx";
+import KeyValuePairs from "./components/KeyValuePairs.jsx";
 import Loops from "./components/Loops.jsx";
 import Sets from "./components/Sets.jsx";
 import StringManipulation from "./components/StringManipulation.jsx";
@@ -21,7 +22,8 @@ const sections = [
   TypesAndTypeChecking,
   Functions,
   ComparisonsAndBooleans,
-  Loops
+  Loops,
+  KeyValuePairs
 ];
 
 function App() {

@@ -3,7 +3,7 @@ import CheatSheet from "./generic/CheatSheet.jsx";
 export default function Functions() {
   const rows = [
     {
-      description: "Default Parameter Behavior",
+      description: "Default Parameters",
       javascript: [
         [
           "function greeting(name, age=18) {",
@@ -28,7 +28,7 @@ export default function Functions() {
       ]
     },
     {
-      description: "Named Function Arguments",
+      description: "Named Arguments",
       javascript: [
         [
           "// JS does not support named arguments",
@@ -39,17 +39,17 @@ export default function Functions() {
       python: [["greeting(name='Teriz', age=26)"]]
     },
     {
-      description: "Return a Tuple",
+      description: "Return Tuple",
       javascript: [["// No direct equivalent"]],
       python: [["return amount, tax, total amount"]]
     },
     {
-      description: "Return a Set",
+      description: "Return Set",
       javascript: [["// No direct equivalent"]],
       python: [["return { amount, tax, total amount }"]]
     },
     {
-      description: "Return an Object",
+      description: "Return Object",
       javascript: [["return { amount, tax, total amount }"]],
       python: [["// TODO: After refresher on dictionaries"]]
     }

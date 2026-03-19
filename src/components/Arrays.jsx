@@ -132,7 +132,7 @@ export default function Arrays() {
       python: [["fruits.pop(2)", "fruits.pop(-2)", "del fruits[2]"]]
     },
     {
-      description: "Empty an Array",
+      description: "Empty Array",
       javascript: [["fruits = []"]],
       python: [["fruits = []", "fruits.clear()", "fruits = list()"]]
     },

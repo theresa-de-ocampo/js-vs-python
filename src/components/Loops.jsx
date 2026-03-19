@@ -3,12 +3,7 @@ import CheatSheet from "./generic/CheatSheet.jsx";
 export default function Loops() {
   const rows = [
     {
-      description: "Prefix & Postfix Increment",
-      javascript: [["++i", "i++"]],
-      python: [["# No Equivalent"]]
-    },
-    {
-      description: "for Loop",
+      description: "Declaration",
       javascript: [
         [
           "for (let i = 0; i < 5; i++)",
@@ -25,12 +20,17 @@ export default function Loops() {
       ]
     },
     {
-      description: "Loop Through Elements",
+      description: "Increment Operator",
+      javascript: [["++i", "i++"]],
+      python: [["# No Equivalent"]]
+    },
+    {
+      description: "Iterate Elements",
       javascript: [
         ["fruits.map(f => console.log(f))"],
         [
           "for (let i = 0; i < fruits.length; i++) {",
-          { text: "console.log(fruits[f])", className: "indent-1" },
+          { text: "console.log(fruits[i])", className: "indent-1" },
           "}"
         ],
         ["fruits.map((f, i) => console.log(i + 1, f))"]

@@ -24,7 +24,7 @@ export default function Tuples() {
       ]
     },
     {
-      description: "Empty a Tuple",
+      description: "Empty Tuple",
       javascript: [["// No direct equivalent"]],
       python: [["fruits = ()", "fruits = tuple()"]]
     }

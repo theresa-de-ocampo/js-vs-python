@@ -5,25 +5,30 @@ export default function ComparisonsAndBooleans() {
     {
       description: "Equality",
       javascript: [
-        ["// JS is loosely typed", "5 == 5 // true", "5 === '5' // true"]
+        [
+          "// JS is loosely typed",
+          "5 == 5 // true",
+          "5 == '5' // true",
+          "5 === '5' // false"
+        ]
       ],
       python: [
         [
-          "// Python is strongly typed",
-          "// It does not have ===",
-          "// Because == is already strict",
-          "5 == 5 // True",
-          "5 == '5' // False"
+          "# Python is strongly typed",
+          "# It does not have ===",
+          "# Because == is already strict",
+          "5 == 5 # True",
+          "5 == '5' # False"
         ]
       ]
     },
     {
-      description: "Array Values are Equal",
+      description: "Value Equality",
       javascript: [["// No direct equivalent"]],
-      python: [["a = [3,7,42]", "b = a", "print(a == b) // True"]]
+      python: [["a = [3,7,42]", "b = a", "print(a == b) # True"]]
     },
     {
-      description: "Array Reference Equality",
+      description: "Reference Equality",
       javascript: [
         ["const a = [3,7,42]", "const b = a", "console.log(a == b) // true"]
       ],
@@ -32,16 +37,16 @@ export default function ComparisonsAndBooleans() {
           "a = [3,7,42]",
           "b = a",
           "c = [3,7,42]",
-          "print(a is b) // True",
-          "print(id(a), id(b)) // 2 2",
-          "print(a is c) // False"
+          "print(a is b) # True",
+          "print(id(a), id(b)) # 2 2",
+          "print(a is c) # False"
         ]
       ]
     },
     {
       description: "Truthy / Falsy",
       javascript: [["const fruits = []", "Boolean(fruits) // true"]],
-      python: [["fruits = []", "bool(fruits) // False"]]
+      python: [["fruits = []", "bool(fruits) # False"]]
     }
   ];
 

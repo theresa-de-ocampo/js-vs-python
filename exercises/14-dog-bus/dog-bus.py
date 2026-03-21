@@ -67,7 +67,6 @@ if len(dogs) < MAX_SEATS:
 
 pet_to_remove = input("Which pet leaves early? ").title()
 
-# next(dog["name"] == "pet_to_remove" for dog in dogs.values())
 found = next(
     ((id, dog) for id, dog in dogs.items() if dog["name"] == pet_to_remove), None
 )

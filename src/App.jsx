@@ -2,6 +2,8 @@ import Arrays from "./components/Arrays.jsx";
 import Arithmetic from "./components/Arithmetic.jsx";
 import Comments from "./components/Comments.jsx";
 import ComparisonsAndBooleans from "./components/ComparisonsAndBooleans.jsx";
+import ErrorHandling from "./components/ErrorHandling.jsx";
+import FileHandling from "./components/FileHandling.jsx";
 import Functions from "./components/Functions.jsx";
 import InputOutput from "./components/InputOutput.jsx";
 import KeyValuePairs from "./components/KeyValuePairs.jsx";
@@ -25,7 +27,9 @@ const sections = [
   ComparisonsAndBooleans,
   Loops,
   KeyValuePairs,
-  SearchAndFiltering
+  SearchAndFiltering,
+  FileHandling,
+  ErrorHandling
 ];
 
 function App() {

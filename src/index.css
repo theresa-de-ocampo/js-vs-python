@@ -59,6 +59,10 @@ p code {
   padding-left: 2ch;
 }
 
+.indent-2 {
+  padding-left: 4ch;
+}
+
 #root {
   width: 100%;
 }

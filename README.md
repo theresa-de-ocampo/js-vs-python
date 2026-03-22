@@ -1,16 +1,34 @@
-# React + Vite
+# JavaScript vs Python CheatSheet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [Why does Python use the `try-except-else` pattern?](https://stackoverflow.com/questions/16138232/is-it-a-good-practice-to-use-try-except-else-in-python)
 
-Currently, two official plugins are available:
+```python
+try:
+    file = open("data.txt")
+    content = file.read()
+    processed = process(content)
+    print(processed)
+except Exception as e:
+    print("Error:", e)
+finally:
+    file.close()
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+If `process(content)` fails, Python will still catch it — even though that error has nothing to do with opening the file. This makes debugging harder as it's difficult to tell which line failed.
 
-## React Compiler
+```python
+try:
+    file = open("data.txt")
+    content = file.read()
+except Exception as e:
+    print("Error reading file:", e)
+else:
+    processed = process(content)
+    print(processed)
+finally:
+    file.close()
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In this second version, the program will crash if `process(content)` fails. This is a **design decision** in Python.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> Only catch what you understand. Let everything else fail loudly.

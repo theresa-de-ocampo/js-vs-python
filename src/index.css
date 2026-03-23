@@ -63,6 +63,10 @@ p code {
   padding-left: 4ch;
 }
 
+.indent-3 {
+  padding-left: 6ch;
+}
+
 #root {
   width: 100%;
 }

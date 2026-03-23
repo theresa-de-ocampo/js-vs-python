@@ -8,6 +8,7 @@ import Functions from "./components/Functions.jsx";
 import InputOutput from "./components/InputOutput.jsx";
 import KeyValuePairs from "./components/KeyValuePairs.jsx";
 import Loops from "./components/Loops.jsx";
+import OOP from "./components/OOP.jsx";
 import SearchAndFiltering from "./components/SearchAndFiltering.jsx";
 import Sets from "./components/Sets.jsx";
 import StringManipulation from "./components/StringManipulation.jsx";
@@ -29,7 +30,8 @@ const sections = [
   KeyValuePairs,
   SearchAndFiltering,
   FileHandling,
-  ErrorHandling
+  ErrorHandling,
+  OOP
 ];
 
 function App() {

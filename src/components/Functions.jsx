@@ -52,6 +52,11 @@ export default function Functions() {
       description: "Return Object",
       javascript: [["return { amount, tax, total amount }"]],
       python: [["// TODO: After refresher on dictionaries"]]
+    },
+    {
+      description: "Short-Hand Notation",
+      javascript: [["// Arrow Functions", "const multiply = (x, y) => x * y"]],
+      python: [["# Lambda Functions", "multiply = lambda x, y: x * y"]]
     }
   ];
 

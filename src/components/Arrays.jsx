@@ -67,8 +67,18 @@ export default function Arrays() {
     },
     {
       description: "Sort 2D Array",
-      javascript: [["fruitsTally.toSorted((a, b) => a[1] - b[1])"]],
-      python: [["sorted(fruits_tally, key=lambda item: item[1])"]]
+      javascript: [
+        [
+          "fruitsTally.sort((a, b) => a[1] - b[1])",
+          "fruitsTally.toSorted((a, b) => a[1] - b[1])"
+        ]
+      ],
+      python: [
+        [
+          "fruits_tally.sort(key=lambda item: item[1])",
+          "sorted(fruits_tally, key=lambda item: item[1])"
+        ]
+      ]
     },
     {
       description: "Minimum Value",

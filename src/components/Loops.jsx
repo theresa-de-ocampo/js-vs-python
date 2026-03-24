@@ -3,7 +3,7 @@ import CheatSheet from "./generic/CheatSheet.jsx";
 export default function Loops() {
   const rows = [
     {
-      description: "Declaration",
+      description: "Counted Loop",
       javascript: [
         [
           "for (let i = 0; i < 5; i++)",
@@ -25,18 +25,37 @@ export default function Loops() {
       python: [["# No Equivalent"]]
     },
     {
-      description: "Iterate Elements",
+      description: "Iterate Values",
       javascript: [
-        ["fruits.map(f => console.log(f))"],
+        [
+          "for (const fruit of fruits) {",
+          { text: "console.log(fruit)", className: "indent-1" },
+          "}"
+        ],
+        ["fruits.forEach(fruit => console.log(fruit))"]
+      ],
+      python: [
+        [
+          "for fruit in fruits:",
+          { text: "print(fruit)", className: "indent-1" }
+        ]
+      ]
+    },
+    {
+      description: "Iterate With Index",
+      javascript: [
         [
           "for (let i = 0; i < fruits.length; i++) {",
           { text: "console.log(fruits[i])", className: "indent-1" },
           "}"
         ],
-        ["fruits.map((f, i) => console.log(i + 1, f))"]
+        [
+          "for (const [i, fruit] of fruits.entries()) {",
+          { text: "console.log(i, fruit)", className: "indent-1" },
+          "}"
+        ]
       ],
       python: [
-        ["for f in fruits:", { text: "print(f)", className: "indent-1" }],
         [
           "for i in range(len(fruits)):",
           { text: "print(fruits[i])", className: "indent-1" }
@@ -44,18 +63,46 @@ export default function Loops() {
         [
           "for i, fruit in enumerate(fruits):",
           {
-            text: "print(i + 1, fruit)",
-            className: "indent-1"
-          },
-          " ",
-          "for i, fruit in enumerate(fruits, 1):",
-          {
             text: "print(i, fruit)",
             className: "indent-1"
-          },
-          " ",
-          "type(enumerate(fruits)) // <class 'enumerate'>"
+          }
         ]
+      ]
+    },
+    {
+      description: "Start Index at 1",
+      javascript: [
+        [
+          "fruits.forEach(",
+          {
+            text: "(fruit, i) => console.log(i + 1, fruit)",
+            className: "indent-1"
+          },
+          ")"
+        ]
+      ],
+      python: [
+        [
+          "for i, fruit in enumerate(fruits, 1):",
+          { text: "print(i, fruit)", className: "indent-1" }
+        ]
+      ]
+    },
+    {
+      description: "Transform",
+      javascript: [
+        [
+          "const uppercased = fruits.map(",
+          {
+            text: "fruit => fruit.toUpperCase()",
+            className: "indent-1"
+          },
+          ")"
+        ]
+      ],
+      python: [
+        ["uppercased = [fruit.upper() for fruit in fruits]"],
+        ["uppercased = list(map(str.upper, fruits))"]
       ]
     }
   ];

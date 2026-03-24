@@ -76,6 +76,21 @@ export default function StringManipulation() {
           "msg.split() // Splits by spaces"
         ]
       ]
+    },
+    {
+      description: "Remove Leading Spaces",
+      javascript: [["msg.trimStart()"]],
+      python: [["msg.lstrip()"]]
+    },
+    {
+      description: "Remove Trailing Spaces",
+      javascript: [["msg.trimEnd()"]],
+      python: [["msg.rstrip()"]]
+    },
+    {
+      description: "Remove Leading & Trailing Spaces",
+      javascript: [["msg.trim()"]],
+      python: [["msg.strip()"]]
     }
   ];
 

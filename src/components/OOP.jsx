@@ -71,7 +71,9 @@ export default function OOP() {
             text: "}",
             className: "indent-1"
           },
-          "}"
+          "}",
+          " ",
+          "const myAccount = new Account('Teriz', 30000)"
         ]
       ],
       python: [
@@ -86,7 +88,7 @@ export default function OOP() {
             className: "indent-2"
           },
           {
-            text: "self.__balance = balance",
+            text: "self._balance = balance",
             className: "indent-2"
           },
           " ",
@@ -104,11 +106,11 @@ export default function OOP() {
           },
           " ",
           {
-            text: "self.__balance += amount",
+            text: "self._balance += amount",
             className: "indent-2"
           },
           {
-            text: "return self.__balance",
+            text: "return self._balance",
             className: "indent-2"
           },
           " ",
@@ -121,8 +123,147 @@ export default function OOP() {
             className: "indent-1"
           },
           {
-            text: "return self.__balance",
+            text: "return self._balance",
             className: "indent-2"
+          },
+          " ",
+          "my_account = Account('Teriz', 30000)"
+        ]
+      ]
+    },
+    {
+      description: "Inheritance",
+      javascript: [
+        [
+          "class Person {",
+          {
+            text: "constructor(",
+            className: "indent-1"
+          },
+          {
+            text: "public fname: string,",
+            className: "indent-2"
+          },
+          {
+            text: "public lname: string",
+            className: "indent-2"
+          },
+          {
+            text: ") {}",
+            className: "indent-1"
+          },
+          " ",
+          {
+            text: "walk() {",
+            className: "indent-1"
+          },
+          {
+            text: "console.log('Walking')",
+            className: "indent-2"
+          },
+          {
+            text: "}",
+            className: "indent-1"
+          },
+          "}",
+          " ",
+          "class Student extends Person {",
+          {
+            text: "constructor(",
+            className: "indent-1"
+          },
+          {
+            text: "public readonly studentId: number,",
+            className: "indent-2"
+          },
+          {
+            text: "fname: string,",
+            className: "indent-2"
+          },
+          {
+            text: "lname: string",
+            className: "indent-2"
+          },
+          {
+            text: ") {",
+            className: "indent-2"
+          },
+          {
+            text: "super(fname, lname)",
+            className: "indent-3"
+          },
+          {
+            text: "}",
+            className: "indent-1"
+          },
+          "}"
+        ]
+      ],
+      python: [
+        [
+          "class Person:",
+          {
+            text: "def __init__(self, fname, lname):",
+            className: "indent-1"
+          },
+          {
+            text: "self.fname = fname",
+            className: "indent-2"
+          },
+          {
+            text: "self.lname = lname",
+            className: "indent-2"
+          },
+          " ",
+          {
+            text: "def walk(self):",
+            className: "indent-1"
+          },
+          {
+            text: "print('Walking')",
+            className: "indent-2"
+          },
+          " ",
+          "class Student(Person):",
+          {
+            text: "def __init__(self, student_id, fname, lname):",
+            className: "indent-1"
+          },
+          {
+            text: "super().__init__(fname, lname)",
+            className: "indent-2"
+          },
+          {
+            text: "self._student_id = student_id",
+            className: "indent-2"
+          },
+          " ",
+          {
+            text: "@property",
+            className: "indent-1"
+          },
+          {
+            text: "def student_id(self):",
+            className: "indent-1"
+          },
+          {
+            text: "return self._student_id",
+            className: "indent-2"
+          }
+        ]
+      ]
+    },
+    {
+      description: "Multiple Inheritance",
+      javascript: [
+        ["// No direct equivalent", "// Closest would be interfaces"]
+      ],
+      python: [
+        [
+          "class WorkingStudent(Employee, Student):",
+          {
+            text: "# ...",
+            className: "indent-1"
           }
         ]
       ]

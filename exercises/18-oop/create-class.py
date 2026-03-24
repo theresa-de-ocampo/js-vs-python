@@ -1,19 +1,19 @@
 class Account:
     def __init__(self, owner, balance):
         self.owner = owner
-        self.__balance = balance
+        self._balance = balance
 
     def deposit(self, amount):
         if amount <= 0:
             raise ValueError("Invalid deposit amount")
 
-        self.__balance += amount
+        self._balance += amount
 
-        return self.__balance
+        return self._balance
 
     @property
     def balance(self):
-        return self.__balance
+        return self._balance
 
 
 myAccount = Account("Teriz", 30000)

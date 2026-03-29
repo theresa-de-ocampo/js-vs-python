@@ -267,6 +267,11 @@ export default function OOP() {
           }
         ]
       ]
+    },
+    {
+      description: "Instance Of",
+      javascript: [["john instanceof Person"]],
+      python: [["john instanceof Person"]]
     }
   ];
 

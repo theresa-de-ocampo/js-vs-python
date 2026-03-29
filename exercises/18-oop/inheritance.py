@@ -20,3 +20,4 @@ class Student(Person):
 teriz = Student(1, "Teriz", "De Ocampo")
 teriz.walk()
 print(teriz.student_id)
+print(isinstance(teriz, Person))

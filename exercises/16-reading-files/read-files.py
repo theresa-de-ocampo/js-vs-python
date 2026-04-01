@@ -7,10 +7,10 @@ from pathlib import Path
 # The forward slash is an operator overloaded by pathlib
 # Even if you did something like:
 # ```
-# __dirname = Path(__file__).parent
-# file_path = __dirname / "files" / "hello.txt"
+# dirname = Path(__file__).parent
+# file_path = dirname / "files" / "hello.txt"
 # ```
-# Python knows that __dirname is a Path object.
+# Python knows that dirname is a Path object.
 
 file_path = Path(__file__).parent / "files" / "hello.txt"
 

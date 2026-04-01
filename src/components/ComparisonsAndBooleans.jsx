@@ -7,8 +7,8 @@ export default function ComparisonsAndBooleans() {
       javascript: [
         [
           "// JS is loosely typed",
-          "5 == 5 // true",
-          "5 == '5' // true",
+          "5 == 5    // true",
+          "5 == '5'  // true",
           "5 === '5' // false"
         ]
       ],
@@ -17,7 +17,7 @@ export default function ComparisonsAndBooleans() {
           "# Python is strongly typed",
           "# It does not have ===",
           "# Because == is already strict",
-          "5 == 5 # True",
+          "5 == 5   # True",
           "5 == '5' # False"
         ]
       ]

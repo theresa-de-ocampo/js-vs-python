@@ -11,9 +11,9 @@ export default function Functions() {
           "}"
         ],
         [
-          "greeting('Teriz') // Default Used",
+          "greeting('Teriz')            // Default Used",
           "greeting('Teriz', undefined) // Default Used",
-          "greeting('Teriz', null) // Default NOT Used"
+          "greeting('Teriz', null)      // Default NOT Used"
         ]
       ],
       python: [
@@ -22,7 +22,7 @@ export default function Functions() {
           { text: "# body", className: "indent-1" }
         ],
         [
-          "greeting('Teriz') # Default used",
+          "greeting('Teriz')       # Default used",
           "greeting('Teriz', None) # Default NOT used"
         ]
       ]
@@ -41,17 +41,34 @@ export default function Functions() {
     {
       description: "Return Tuple",
       javascript: [["// No direct equivalent"]],
-      python: [["return amount, tax, total amount"]]
+      python: [["return x, y, z"]]
     },
     {
       description: "Return Set",
-      javascript: [["// No direct equivalent"]],
-      python: [["return { amount, tax, total amount }"]]
+      javascript: [["return new Set([x, y, z])"]],
+      python: [["return { x, y, z }"]]
     },
     {
       description: "Return Object",
-      javascript: [["return { amount, tax, total amount }"]],
-      python: [["// TODO: After refresher on dictionaries"]]
+      javascript: [["return { amount, tax, total_amount }"]],
+      python: [
+        [
+          "return {",
+          {
+            text: "'amount': 10,",
+            className: "indent-1"
+          },
+          {
+            text: "'tax': 2,",
+            className: "indent-1"
+          },
+          {
+            text: "'total_amount': 12",
+            className: "indent-1"
+          },
+          "}"
+        ]
+      ]
     },
     {
       description: "Short-Hand Notation",

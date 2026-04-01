@@ -26,10 +26,37 @@ export default function FileHandling() {
       python: [["from pathlib import Path", "dirname = Path(__file__).parent"]]
     },
     {
+      description: "Path Object",
+      javascript: [
+        [
+          "import { parse } from 'path'",
+          "const p = parse(__filename)",
+          " ",
+          "p.root // C:\\",
+          "p.dir  // C:\\app\\files\\",
+          "p.base // demo.js",
+          "p.ext  // .js",
+          "p.name // demo"
+        ]
+      ],
+      python: [
+        [
+          "from pathlib import Path",
+          "p = Path(__file__)",
+          " ",
+          "p.anchor # c:\\",
+          "p.parent # C:\\app\\files\\",
+          "p.name   # demo.py",
+          "p.suffix # .py",
+          "p.stem   # demo"
+        ]
+      ]
+    },
+    {
       description: "Read Text File",
       javascript: [
         [
-          "await fsPromises.readFile(",
+          "const contentBuffer = await fsPromises.readFile(",
           {
             text: "path.join(__dirname, 'files', 'hello.txt'),",
             className: "indent-1"
@@ -43,10 +70,10 @@ export default function FileHandling() {
       ],
       python: [
         [
-          "file_path = __dirname / 'files' / 'hello.txt'",
+          "file_path = dirname / 'files' / 'hello.txt'",
           "with open(file_path, 'r', encoding='utf-8') as f:",
           {
-            text: "f.read()",
+            text: "contentStr = f.read()",
             className: "indent-1"
           }
         ]

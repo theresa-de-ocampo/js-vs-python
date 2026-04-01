@@ -96,3 +96,58 @@ using `Sequence` provides the following benefits:
 - more reusable
 - less restrictive
 - easier to construct from different parts of the codebase
+
+## 4. ReportLab
+
+### Flowable
+
+A flowable is a piece of content that can be placed into the document flow. You can think of it as "one renderable block" in the PDF story.
+
+Examples:
+
+- `Paragraph`
+- `LongTable`
+- `Spacer`
+- `PageBreak`
+- `TableOfContents`
+
+When you build the PDF, you create a list called `story`, and that list is just an ordered list of flowables. ReportLab then lays them out one after another across pages.
+
+```python
+story = []
+```
+
+Section builders append things like headings and tables. Those appended objects are flowables.
+
+#### `afterFlowable`
+
+`afterFlowable` is a ReportLab lifecycle hook. It is called automatically by `BaseDocTemplate` after each flowable is rendered during `doc.multiBuild(story)`, so you would not expect any direct calls from your own modules.
+
+### `bookmark_name`
+
+`bookmark_name` is the internal PDF anchor ID for a heading. Each heading gets a unique value like:
+
+```
+heading-1
+heading-2
+```
+
+Then, `afterFlowable` uses it here:
+
+```
+self.canv.bookmarkPage(bookmark_name)
+self.notify("TOCEntry", (level, text, self.page, bookmark_name))
+```
+
+What that does:
+
+- `bookmarkPage(bookmark_name)` creates a named destination in the PDF at the current page.
+- the table of content entry stores that destination name.
+- PDF outline/sidebar entries also use it.
+
+So `bookmark_name` is what lets the TOC or PDF bookmarks jump to the correct setion, instead of only displaying page numbers.
+
+Without it, you could still print the heading text, but clickable navigation targets would not exist.
+
+- `toc_level` says what the level heading is.
+- `bookmark_name` says where that heading lives in the PDF.

@@ -9,6 +9,7 @@ import InputOutput from "./components/InputOutput.jsx";
 import KeyValuePairs from "./components/KeyValuePairs.jsx";
 import Loops from "./components/Loops.jsx";
 import OOP from "./components/OOP.jsx";
+import Random from "./components/Random.jsx";
 import SearchAndFiltering from "./components/SearchAndFiltering.jsx";
 import Sets from "./components/Sets.jsx";
 import StringManipulation from "./components/StringManipulation.jsx";
@@ -31,7 +32,8 @@ const sections = [
   SearchAndFiltering,
   FileHandling,
   ErrorHandling,
-  OOP
+  OOP,
+  Random
 ];
 
 function App() {

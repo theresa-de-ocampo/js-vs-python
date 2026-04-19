@@ -44,7 +44,7 @@ export default function FileHandling() {
           "from pathlib import Path",
           "p = Path(__file__)",
           " ",
-          "p.anchor # c:\\",
+          "p.anchor # C:\\",
           "p.parent # C:\\app\\files\\",
           "p.name   # demo.py",
           "p.suffix # .py",

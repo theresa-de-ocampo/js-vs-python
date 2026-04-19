@@ -18,7 +18,7 @@ export default function TypesAndTypeChecking() {
         [
           "// JS is loosely typed",
           "console.log('My fav no. is ' + 7) // Allowed",
-          "console.log(42 + false) // 7"
+          "console.log(7 + false) // 7"
         ]
       ],
       python: [

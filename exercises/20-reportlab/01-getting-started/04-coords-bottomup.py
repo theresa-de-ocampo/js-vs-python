@@ -1,7 +1,8 @@
+from pathlib import Path
+
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
-from pathlib import Path
 
 
 def coord(x, y, unit):
@@ -9,7 +10,8 @@ def coord(x, y, unit):
     return x, y
 
 
-file_path = Path(__file__).parent / "output" / f"{Path(__file__).stem}.pdf"
+p = Path(__file__)
+file_path = p.parent / "output" / f"{p.stem}.pdf"
 
 c = canvas.Canvas(str(file_path), pagesize=letter, bottomup=0)
 

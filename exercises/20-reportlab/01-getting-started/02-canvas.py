@@ -1,7 +1,9 @@
-from reportlab.pdfgen import canvas
 from pathlib import Path
 
-file_path = Path(__file__).parent / "output" / f"{Path(__file__).stem}.pdf"
+from reportlab.pdfgen import canvas
+
+p = Path(__file__)
+file_path = p.parent / "output" / f"{p.stem}.pdf"
 
 # You can also configure the page size from the constructor.
 c = canvas.Canvas(str(file_path), bottomup=0, encrypt="secret")

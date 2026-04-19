@@ -14,7 +14,15 @@ export default function Arithmetic() {
     },
     {
       description: "Round to 2 Decimal Places",
-      javascript: [["Math.round((n + Number.EPSILON) * 100) / 100"]],
+      javascript: [
+        [
+          "// 1. Fix floating point issues w/ EPISLON",
+          "// 2. Shift decimal to the right",
+          "// 3. Round it",
+          "// 4. Shift the decimal back",
+          "Math.round((n + Number.EPSILON) * 100) / 100"
+        ]
+      ],
       python: [["round(n, 2)"]]
     },
     {

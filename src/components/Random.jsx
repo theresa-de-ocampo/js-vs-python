@@ -9,7 +9,14 @@ export default function Random() {
     },
     {
       description: "[min,max] Integers",
-      javascript: [["Math.floor(Math.random() * (max - min + 1) + min)"]],
+      javascript: [
+        [
+          "// 1. Scale it to range size",
+          "// 2. Shift it to start at min",
+          "// 3. Convert to int",
+          "Math.floor(Math.random() * (max - min + 1) + min)"
+        ]
+      ],
       python: [["random.randint(min, max)"]]
     },
     {

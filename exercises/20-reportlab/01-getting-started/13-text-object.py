@@ -18,6 +18,7 @@ if __name__ == "__main__":
     textobject.setFillColor(colors.red)
 
     textobject.textLine("Python Rocks in Red!")
+    textobject.textLines(["JavaScript also rocks!", "But TypeScript is even better."])
 
     c.drawText(textobject)
     c.save()

@@ -13,6 +13,6 @@ if __name__ == "__main__":
     file_path = p.parent / "output" / f"{p.stem}.pdf"
     c = canvas.Canvas(str(file_path), pagesize=letter)
 
-    image_path = p.parent / "assets" / "python.png"
+    image_path = p.parent.parent / "assets" / "python.png"
     add_image(c, str(image_path))
     c.save()
